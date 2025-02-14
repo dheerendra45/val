@@ -23,10 +23,10 @@ interface Nickname {
 // These will be displayed as interactive stars in the night sky section
 const nicknames: Nickname[] = [
   { name: "Sweetie", reason: "Because you're the sweetest person I know", position: { x: 20, y: 30 } },
-  { name: "Princess", reason: "Because you deserve to be treated like royalty", position: { x: 60, y: 15 } },
-  { name: "Sunshine", reason: "Because you light up my world", position: { x: 80, y: 40 } },
+  { name: "barish", reason: "Because you deserve to be treated like royalty", position: { x: 60, y: 15 } },
+  { name: "Aishwarya", reason: "Because you light up my world", position: { x: 80, y: 40 } },
   { name: "Angel", reason: "Because you're a blessing in my life", position: { x: 40, y: 60 } },
-  { name: "Jaan", reason: "Because you're my life", position: { x: 70, y: 70 } },
+  { name: "bebo", reason: "Because you're my life", position: { x: 70, y: 70 } },
 ];
 
 // Special nickname that appears when interacting with the moon
@@ -288,12 +288,12 @@ function App() {
             onInit={(typewriter) => {
               typewriter
                 .typeString(
-                  "My Dearest Love,\n\n" +
+                  "My Dearest bebo/Aishwarya,\n\n" +
                   "Every day with you feels like a beautiful dream come true. " +
                   "Your smile brightens my darkest days, and your love gives me strength I never knew I had. " +
                   "You're not just my partner, you're my best friend, my confidante, and my soulmate.\n\n" +
                   "I love you more with each passing moment.\n\n" +
-                  "Forever Yours ❤️"
+                  "Forever Yours  my bebooo❤️"
                 )
                 .callFunction(() => {
                   setLetterTyped(true);
