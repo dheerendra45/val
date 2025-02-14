@@ -79,8 +79,8 @@ function App() {
   return (
     <div className="snap-y snap-mandatory h-screen overflow-y-auto overflow-x-hidden">
       {/* Valentine's Proposal Section */}
-      <section className="snap-start  h-screen relative overflow-hidden">
-        {/* Romantic background image with overlay */}
+      <section className="snap-start h-screen relative overflow-hidden">
+        {/* Background image with overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -89,40 +89,36 @@ function App() {
           }}
         />
 
-        {/* Gradient overlay for better text visibility */}
+        {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-pink-500/50 to-transparent" />
 
-        {/* Main content container */}
-       <div className="relative z-10 h-full w-full flex justify-start items-center pl-64">
-
-
-          <div className="ml-16 max-w-xl">
-            {/* Animated image container */}
+        {/* Main content container - Updated for responsiveness */}
+        <div className="relative z-10 h-full w-full flex items-center justify-center px-4 md:px-8 lg:px-16">
+          <div className="text-center md:text-left max-w-xl">
+            {/* Animated image container - Updated for responsiveness */}
             <motion.div
               animate={{ scale: [1, 1.1, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
-              className="mb-8"
+              className="mb-8 flex justify-center md:justify-start"
             >
               {proposalAccepted ? (
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 items-center md:items-start">
                   <img
                     src="https://gifdb.com/images/thumbnail/cute-cat-kiss-animated-hug-j3uoo2pgfxti6d2y.gif"
                     alt="Cute cats hugging"
-                    className="w-64 h-64 object-cover rounded-full shadow-lg"
+                    className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full shadow-lg"
                   />
-
                 </div>
               ) : (
-              <img
-                    src="https://sumitjha.sirv.com/image2.gif"
-                    alt="Celebration"
-                    className="w-64 h-64 object-cover rounded-full shadow-lg"
-                  />
-
+                <img
+                  src="https://sumitjha.sirv.com/image2.gif"
+                  alt="Celebration"
+                  className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full shadow-lg"
+                />
               )}
             </motion.div>
 
-            {/* Conditional rendering based on proposal acceptance */}
+            {/* Conditional rendering - Updated for responsiveness */}
             {!proposalAccepted ? (
               <>
                 <motion.h1
@@ -130,21 +126,21 @@ function App() {
                     textShadow: ["0 0 5px #ff69b4", "0 0 20px #ff69b4", "0 0 5px #ff69b4"]
                   }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  className="text-4xl font-handwriting text-white mb-8"
+                  className="text-3xl md:text-4xl font-handwriting text-white mb-8"
                 >
                   Will you be my Valentine?
                 </motion.h1>
-                <div className="space-x-4">
+                <div className="flex flex-col md:flex-row gap-4 md:gap-8 justify-center md:justify-start">
                   <motion.button
                     whileHover={{ scale: 1.1 }}
-                    className="px-6 py-3 bg-pink-500 text-white rounded-full font-semibold shadow-lg"
+                    className="px-6 py-3 bg-pink-500 text-white rounded-full font-semibold shadow-lg w-full md:w-auto"
                     onClick={() => setProposalAccepted(true)}
                   >
                     Yes, of course!
                   </motion.button>
                   <motion.button
                     whileHover={{ scale: 1.1 }}
-                    className="px-6 py-3 bg-pink-500 text-white rounded-full font-semibold shadow-lg"
+                    className="px-6 py-3 bg-pink-500 text-white rounded-full font-semibold shadow-lg w-full md:w-auto"
                     onClick={() => setProposalAccepted(true)}
                   >
                     Yes, definitely!
@@ -155,7 +151,7 @@ function App() {
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="text-center text-4xl font-handwriting text-white mt-4"
+                className="text-center md:text-left text-3xl md:text-4xl font-handwriting text-white mt-4"
               >
                 I Love You ❤️
               </motion.div>
